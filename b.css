@@ -13,12 +13,13 @@ ul,ol{
 }
 #xxx{  
   display: block;
+  position: fixed;
+  top:0;
+  left:0;
 }
-
 body{
   margin: 0px;
 }
-
 .actions{
   position: fixed;
   top: 0px;
@@ -67,4 +68,37 @@ body{
 .actions .pencolor > li.active{
   box-shadow: 0 0  3px rgba(0,0,0,0.95);
   transform: scale(1.2);
+}
+.sizes {
+  position: fixed;
+  right: 20px;
+  top:10px;
+}
+.sizes > li {
+  margin: 20px 0 ;
+  font-size: 8px;
+  transition: all 0.3s
+}
+.sizes > .thin{
+  
+  width: 20px;
+  border-top: 2px solid black;
+}
+.sizes > .thick{
+  
+  width: 20px;
+  border-top: 7px solid black;
+}
+.sizes > li.active {
+  margin: 20px 0 ;
+  font-size: 8px;
+  transform: scale(1.2);
+  color: red;
+}
+#clear{
+  
+   transition: all 0.5s ;
+}
+#clear.click{
+transform: rotate(360deg);
 }
