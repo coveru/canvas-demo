@@ -102,9 +102,11 @@ thick.onclick = function () {
   thin.classList.remove('active')
 }
 clear.onclick = function(){
-  
-  clear.classList.add('click');
   context.clearRect(0, 0, yyy.width, yyy.height);
+  clear.classList.add('active');
+  setTimeout(() => {
+  clear.classList.remove('active')
+  }, 600);
 }
 save.onclick = function(){
 var url = yyy.toDataURL("image/png")
